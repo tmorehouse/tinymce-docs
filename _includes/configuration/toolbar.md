@@ -1,12 +1,18 @@
 ## toolbar
 
-This option allows you to specify the buttons and the order that they will appear on TinyMCE's toolbar.
+This option allows you to define toolbars and specify the buttons and the order that they will appear in the editor. Many [plugins]({{ site.baseurl }}/plugins/) will make available new buttons that can be added to the toolbar.
 
-### Grouping toolbar controls
+**Types:**
 
-To specify the controls that should appear on TinyMCE's toolbar, the `toolbar` option should be provided with a space separated list of toolbar controls. To create groups within this list, please add `|` pipe characters between the groups of controls that you would like to create.
+* `String`: A space separated list of toolbar controls. To create groups within this list, please add `|` pipe characters between the groups of controls that you would like to create.
+* `Boolean`: To disable the toolbar, the toolbar option should be provided a boolean value of `false`.
+* `Array`: To specify multiple toolbars, the toolbar option should be provided with an array of space separated strings, see `String` above.
 
-**Type:** `String`
+**Default Value:**
+
+```js
+'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+```
 
 ##### Example grouped toolbar
 
@@ -17,17 +23,7 @@ tinymce.init({
 });
 ```
 
-### Disabling the toolbar
-
-To disable the toolbar, the toolbar option should be provided a boolean value of `false`.
-
-**Type:** `Boolean`
-
-**Default Value:** `true`
-
-**Possible Values:** `true`, `false`
-
-##### Example
+##### Disabling the toolbar Example
 
 ```js
 tinymce.init({
@@ -36,13 +32,7 @@ tinymce.init({
 });
 ```
 
-### Using multiple toolbars
-
-To specify multiple toolbars, the toolbar option should be provided with an array of space separated strings.
-
-**Type:** `Array`
-
-##### Example
+##### Example using multiple toolbars
 
 ```js
 tinymce.init({

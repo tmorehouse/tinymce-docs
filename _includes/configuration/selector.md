@@ -4,42 +4,32 @@ This option allows you to specify a CSS selector for the areas that TinyMCE shou
 
 When using this option in TinyMCE's regular editing mode, the element will be replaced with an `iframe` that TinyMCE will perform all operations within.
 
-### Replace all textarea elements on the page
+**Types:**
 
-**Type:** `String`
+* `String`: CSS selector matching the element(s) you want TinyMCE to be attached to
 
-##### Example
+**Default Value:**
 
-```js
-tinymce.init({
-  selector: 'textarea'  // change this value according to your HTML
-});
-```
+There is no default value for `selector` since it's a mandatory key. In order to instantiate TinyMCE you need to pass a valid CSS selector string that targets at least one `HTMLDomElement` in your page.
 
-### Replace a textarea element with id 'editable'
-
-**Type:** `String`
-
-##### Example
+##### Example replace a `textarea` element with id `editable`
 
 ```js
 tinymce.init({
-    selector: 'textarea#editable'
+  selector: 'textarea#editable'  // change this value according to your HTML
 });
 ```
 
 When using this option in TinyMCE's inline editing mode, the selector can be used on any block element and will edit the content in place instead of replacing the element with an `iframe`.
 
-### Inline editing mode on a div element with id 'editable'
+##### Example Inline editing mode on a `div` element with `id` `"editable"`
 
-**Type:** `String`
-
-##### Example
+When using this option in TinyMCE's inline editing mode, the selector can be used on any block element and will edit the content in place instead of replacing the element with an `iframe`.
 
 ```js
 tinymce.init({
-    selector: 'div#editable',
-    inline: true
+  selector: 'div#editable',
+  inline: true
 });
 ```
 

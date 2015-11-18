@@ -3,7 +3,6 @@ layout: default
 title: Advanced List Plugin
 title_nav: Advanced List
 description: Create styled number and bulleted lists.
-keywords: advlist advlist_bullet_styles advlist_number_styles
 ---
 
 The `advlist` plugin extends the core `bullist` and `numlist` toolbar controls by adding CSS `list-style-type` styled number formats and bullet types to the controls.
@@ -28,15 +27,22 @@ These settings affect the execution of the `advlist` plugin by providing more gr
 
 This option allows you to include specific unordered list item markers in the default `bullist` toolbar control.
 
-**Type:** `String`
+**Types:**
 
-**Default Value:** `"default,circle,disc,square"`
+* `String`: A space or comma separated string with a list of styles.
 
-**Possible Values:**
+**Default Value:**
 
-  * `circle`: a filled circle
-  * `disc`: a hollow circle
-  * `square`: a filled square
+```js
+'default circle disc square'
+```
+
+**Possible List Values:**
+
+  * `'default'`: default browser behavior
+  * `'circle'`: a filled circle
+  * `'disc'`: a hollow circle
+  * `'square'`: a filled square
 
 #### Example:
 
